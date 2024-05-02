@@ -8,6 +8,18 @@ from chainlit.prompt import Prompt, PromptMessage  # importing prompt tools
 from chainlit.playground.providers import ChatOpenAI  # importing ChatOpenAI tools
 from dotenv import load_dotenv
 
+from langchain_community.vectorstores import Qdrant
+from qdrant_client import QdrantClient, models
+from langchain_openai.embeddings import OpenAIEmbeddings
+#from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain.retrievers import MultiQueryRetriever
+from operator import itemgetter
+from langchain.schema.output_parser import StrOutputParser
+from langchain.schema.runnable import RunnablePassthrough
+
+
+
 load_dotenv()
 
 # ChatOpenAI Templates
@@ -23,7 +35,7 @@ user_template = """{input}
 async def start_chat():
     settings = {
         "model": "gpt-3.5-turbo",
-        "temperature": 1,
+        "temperature": 0,
         "max_tokens": 500,
         "top_p": 1,
         "frequency_penalty": 0,

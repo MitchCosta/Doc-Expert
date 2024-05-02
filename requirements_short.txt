@@ -1,0 +1,9 @@
+idna==3.7
+h11==0.14.0
+h2==4.1.0
+chainlit
+tiktoken
+qdrant-client
+langchain
+langchain-community
+langchain-openai

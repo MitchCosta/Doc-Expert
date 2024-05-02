@@ -1,0 +1,9 @@
+chainlit
+cohere
+tiktoken
+python-dotenv
+langchain
+langchain-core
+langchain-community
+langchain-openai==0.1.5
+qdrant-client==1.7.0

@@ -1,0 +1,11 @@
+chainlit==0.7.700
+cohere==4.37
+openai==1.25.0
+tiktoken==0.6.0
+python-dotenv==1.0.0
+qdrant-client==1.9.0
+langchain==0.1.17
+langchain-core==0.1.48
+langchain-community==0.0.36
+langchain-openai==0.1.5
+pymupdf==1.24.2
